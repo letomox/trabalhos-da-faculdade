@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+ main()
+ {
+ float valor_produto;
+ printf("Informe o valor do produto: ");
+ scanf("%f", &valor_produto);
+ if (valor_produto < 30)
+ printf("O valor da venda  e  %3.2f\n", valor_produto * 1.40);
+ else
+ printf("O valor da venda  e  %3.2f\n", valor_produto * 1.35);
+ }
