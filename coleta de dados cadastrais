@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	char nome[100],endereco[300],sexo[50],telefone[30],cpf[50];
+	int idade;
+	
+	printf("\t DADOS CADASTRAIS \n");
+	printf("\n INFORME SEU NOME:   "); scanf("%s",&nome);
+	printf("\n INFORME SEU CPF ( EX:000.000.000.00 ):    "); scanf("%s",&cpf);
+	printf("\n INFORME SUA IDADE:  "); scanf("%d",&idade);
+	printf("\n DIGITE O SEXO ( M ( masculino ) OU F ( feminino ) ) :   "); scanf("%s",&sexo);
+	printf("\n INFORME SEU TELEFONE ( EX.0000-0000 ):   "), scanf("%s",&telefone);		
+	printf("\n INFORME O SEU ENDERECO ( EX:R:RUA_NOVO_HORIZONTE  N:36   ):  "); scanf("%s",&endereco);
+	printf("\nCONFIRMACAO DOS DADOS");
+	printf("\nCLIENTE: %s ",nome);
+	printf("\nSEXO : %s",sexo);
+	printf("\nIDADE: %d",idade);
+	printf("\nCPF: %s ",cpf);
+	printf("\nTELEFONE: %s ",telefone);
+	printf("\nENDERECO: %s ",endereco);
+	
+	}
