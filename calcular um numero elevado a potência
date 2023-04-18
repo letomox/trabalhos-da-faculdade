@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+
+
+float potencia(float x, int n)
+{
+float result = 1;
+for(int i = 0; i < n ; i++)
+{
+result *= x;
+}
+return result;
+}
+
+
+int main (void)
+{
+float x;
+int n;
+printf("\t##### Calculando 'x' elevado a 'n' (x^n)\n\n");
+printf("Informe a base (x): ");
+scanf("%f", &x);
+printf("Informe o expoente (n): ");
+scanf("%d", &n);
+float resultado = potencia(x,n);
+printf("\nResultado: %.3f^%d = %.3f", x,n,resultado);
+return 0;
+}
+
+
