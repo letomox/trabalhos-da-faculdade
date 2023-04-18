@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+ int num1,num2,num3,soma;
+ float media;  
+ 
+ printf("Insira o 1 numero:");
+ scanf("%d",&num1);
+ printf("Insira o 2 numero:");
+ scanf("%d",&num2);
+ printf("Insira o 3 numero:");
+ scanf("%d",&num3);
+
+ soma=num1+num2+num3;
+ media=soma/3;
+ 
+ printf("\nA soma :  %d  ",soma);
+ printf("\nA media :  %.1f  ",media);
+ 
+ }
