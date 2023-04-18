@@ -1,0 +1,52 @@
+#include<iostream>
+#include<stdlib.h>
+#define MAXALUNO 5
+
+using namespace std;
+struct infoaluno{
+    int matricula[MAXALUNO];
+    float prova1[MAXALUNO], prova2[MAXALUNO], mediaTrabalho[MAXALUNO], provaFinal[MAXALUNO];
+};
+
+float provaFinal(float prova1, float prova2, float trab)
+{
+    return ((((prova1 + prova2) / 2) + trab) / 2);
+}
+
+int main()
+{
+    struct infoaluno info;
+    
+    for (int i = 0; i < MAXALUNO; i++)
+    {
+        cout<<"\nMatricula: "; cin>>info.matricula[i]; 
+        cout<<"prova1: "; cin>>info.prova1[i];
+        cout<<"prova2: "; cin>>info.prova2[i];
+        cout<<"Media do Trabalho: "; cin>>info.mediaTrabalho[i];
+        info.provaFinal[i] = provaFinal(info.prova1[i], info.prova2[i], info.mediaTrabalho[i]);
+    }
+
+    system("cls");
+
+    int indice; float maior = -1, mediaprovasFinais = 0;
+
+    for (int i = 0; i < MAXALUNO; i++)
+    {
+        mediaprovasFinais = mediaprovasFinais + info.provaFinal[i];
+        
+        if (info.provaFinal[MAXALUNO - i] > maior)
+        {
+            maior = info.provaFinal[MAXALUNO - i];
+            indice = (MAXALUNO - i);
+        }
+    }
+
+    mediaprovasFinais = (mediaprovasFinais / MAXALUNO);
+
+    cout<<"\t\tMELHOR ALUNO\n\tMATRICULA: "<<info.matricula[indice]<<"\n\tPROVA FINAL: "<<info.provaFinal[indice]<<endl<<endl;
+    cout<<"MEDIA ARITMETICA DAS PROVAS FINAIS DOS ALUNOS: "<<mediaprovasFinais<<endl<<endl;
+
+    system("pause");
+
+    return 0;
+}
